@@ -208,7 +208,7 @@ cf_properties=$(
           "private_key_pem": $saml_key_pem
         }
       },
-      ".properties.tcp_routing": { "value": "disable" },
+      ".properties.tcp_routing": { "value": "enable" },
       ".properties.route_services": { "value": "enable" },
       ".ha_proxy.skip_cert_verify": { "value": true },
       ".properties.route_services.enable.ignore_ssl_cert_verification": { "value": true },
