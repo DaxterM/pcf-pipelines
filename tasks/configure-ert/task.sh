@@ -209,7 +209,7 @@ cf_properties=$(
         }
       },
       ".properties.tcp_routing": { "value": "enable" },
-      ".properties.tcp_routing.enable.reservable_ports": { "value": 1024-65535 },
+      ".properties.tcp_routing.enable.reservable_ports": { "value": "1024-65535" },
       ".properties.route_services": { "value": "enable" },
       ".ha_proxy.skip_cert_verify": { "value": true },
       ".properties.route_services.enable.ignore_ssl_cert_verification": { "value": true },
