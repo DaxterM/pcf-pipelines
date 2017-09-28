@@ -100,9 +100,10 @@ cf_resources=$(
       "clock_global": {"internet_connected": false},
       "cloud_controller_worker": {"internet_connected": false},
       "diego_brain": {"internet_connected": false},
-      "diego_cell": {"
-         "instances": 2,
-        "internet_connected": false},
+      "diego_cell": {
+        "instances": 2,
+        "internet_connected": false
+       },
       "loggregator_trafficcontroller": {"internet_connected": false},
       "syslog_adapter": {"internet_connected": false},
       "syslog_scheduler": {"internet_connected": false},
