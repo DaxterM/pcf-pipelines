@@ -108,7 +108,10 @@ cf_resources=$(
       "syslog_adapter": {"internet_connected": false},
       "syslog_scheduler": {"internet_connected": false},
       "doppler": {"internet_connected": false},
-      "tcp_router": {"internet_connected": false},
+      "tcp_router": {
+        "instances": 2,
+        "internet_connected": false
+       },
       "smoke-tests": {"internet_connected": false},
       "push-apps-manager": {"internet_connected": false},
       "notifications": {"internet_connected": false},
@@ -131,6 +134,7 @@ cf_resources=$(
     elif $iaas == "gcp" then
       .router |= . + { "elb_names": ["http:\($terraform_prefix)-http-lb-backend","tcp:\($terraform_prefix)-wss-logs"] }
       | .diego_brain |= . + { "elb_names": ["tcp:\($terraform_prefix)-ssh-proxy"] }
+      | .tcp_router |= . + { "elb_names": ["tcp:\($terraform_prefix)-tcp-proxy"] }
     else
       .
     end
