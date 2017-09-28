@@ -82,7 +82,7 @@ cf_resources=$(
         "internet_connected": false
       },
       "mysql": {
-        "instances": 0,
+        "instances": 1,
         "internet_connected": false
       },
       "backup-prepare": {"internet_connected": false},
